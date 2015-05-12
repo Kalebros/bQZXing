@@ -1,17 +1,26 @@
-qzxing
-======
+#bQZXing
 
-QtQuick 2.0 port of the ZXing multi-format 1D/2D barcode image processing library
+Just a little fork of [dplanella's QZXing repository][]
 
-Based on the great work done in the [original QtQuick 1.0 port][] by [Nikolaos Ftylitakis][].
+I'm doing it because I need to compile and use a QR decoder with Qt on Android,
+and the dplanella's version it's great with Qt 5.x... but I've got a 64 bit
+Linux distribution and the libraries for Android raise a error.
 
-This repo essentially makes it possible to use the [ZXing][] 1D/2D barcode decoding library in projects
-based on the Qt 5.x framework. Although not limited to those, this C++ plugin has been ported to
-enable the use of barcode decoding functionality to QML projects based on the Ubuntu SDK.
+So, I need to compile it inside my project, and I need a .PRI to do it :D
 
-[Daily packages][] of this plugin are also available for Ubuntu.
+I've tested it with Qt 5.4 for Android.
 
-[original QtQuick 1.0 port]: https://projects.developer.nokia.com/QZXing
-[Nikolaos Ftylitakis]: http://www.developer.nokia.com/Profile/?u=favoritas37
-[ZXing]: http://code.google.com/p/zxing/
-[Daily packages]: https://launchpad.net/~qreator-hackers/+archive/qreator-experimental
+##Usage
+
+Clone the repository and include the .PRI file on your .PRO file
+
+```
+# Your project's .PRO file
+# ...
+
+include(<bQZXing directory>/QZXing.pri)
+
+# ...
+```
+
+[dplanella's QZXing repository]: https://github.com/dplanella/qzxing
